@@ -1,20 +1,25 @@
-const counterEl = document.querySelectorAll('#counter button');
-console.log(counterEl[1].dataset.action);
 
-// const counterValue = 0;
-// const counterFunc = (action => {
-//     if ('decrement') {
-//         counterValue += 1
-//     } else {
-//         counterValue - + 1,
-//     },
-//     return counterValue;
-// });
-// console.log(counterValue);
-//
-//
-//
-//
-//
-//
-// 
+const decrementButt = document.querySelector('#counter button[data-action="decrement"]');
+const incrementButt = document.querySelector('#counter button[data-action="increment"]');
+
+const counterValue = document.querySelector('#value');
+counterValue.textContent = 0;
+
+
+const handleIncrementBtnClick = () => {
+    counterValue.textContent = Number(counterValue.textContent) + 1;
+};
+const handleDecrementBtnClick = () => {
+    counterValue.textContent = Number(counterValue.textContent) - 1;
+}
+
+
+decrementButt.addEventListener("click", handleDecrementBtnClick);
+incrementButt.addEventListener("click", handleIncrementBtnClick);
+
+
+
+
+
+
+

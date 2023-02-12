@@ -15,40 +15,34 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
 
-// 1.
-for (const element of images) {
-const liEl = document.createElement('li');
-  liEl.classList.add('list');
-  const imageEl = document.createElement('img');
-  imageEl.src = element.url;
-  imageEl.alt = element.alt;
-  imageEl.width = 640;
-  console.log(imageEl);
+// // 1.
+
+const liEl = images
+  .map((imageEl) => `<li class="gallery-item"><img class = "image" src = ${imageEl.url} alt = ${imageEl.alt} width = 320 ></li>`)
+  .join('');
+gallery.insertAdjacentHTML("afterbegin", liEl);
+
+// console.log(gallery);
+
+// 2
+
+// for (const element of images) {
+// // const liEl = document.createElement('li');
+//   // liEl.classList.add('list');
+//   const imageEl = document.createElement('img');
+//   imageEl.src = element.url;
+//   imageEl.alt = element.alt;
+//   imageEl.width = 640;
+//   console.log(imageEl);
 
 
-  gallery.insertAdjacentHTML("beforeend", `<li><img class = "image" src=" ${imageEl.src}" alt = '${imageEl.alt}' width = '${imageEl.width}'</li>`);
-  // gallery.insertAdjacentHTML('beforeend',`<li><img src=" ${element.url}" </li>`
-  // );
-}
-
-// gallery.appendChild(liEl);
-// liEl.appendChild(imageEl);
-console.log(gallery);
-
-
-//   // 2
-// const elements = images.map(option => {
-//   const liEl = document.createElement('li');
-//   liEl.classList.add('list');
-// const imageEl = document.createElement('img');
-//   imageEl.src = option.url;
-//   imageEl.alt = option.alt;
-//   imageEl.width = 320;
-//   gallery.append(liEl);
-//   return imageEl;
-// })
-
-// gallery.append(...elements);
+//   gallery.insertAdjacentHTML("beforeend", `<li><img class = "image" src=" ${imageEl.src}" alt = '${imageEl.alt}' width = '${imageEl.width}'</li>`);
+//   // gallery.insertAdjacentHTML('beforeend',`<li><img src=" ${element.url}" </li>`
+//   // );
+// }
+// 2.2
+// // gallery.appendChild(liEl);
+// // liEl.appendChild(imageEl);
 // console.log(gallery);
 
 

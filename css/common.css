@@ -27,7 +27,6 @@ button {
 /* 3 */
 li {
   list-style-type: none;
-
 }
 
 .image:hover {
@@ -35,3 +34,6 @@ li {
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
+
+/* 6 */
+

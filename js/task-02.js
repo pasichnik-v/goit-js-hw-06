@@ -12,7 +12,7 @@ ingredients.forEach(item => {
   const liEl = document.createElement('li');
   liEl.classList.add('item');
   liEl.textContent = item
-  console.log(liEl);
+  // console.log(liEl);
   list.appendChild(liEl);
 
 });
