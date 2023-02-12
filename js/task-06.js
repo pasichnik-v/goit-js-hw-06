@@ -33,9 +33,9 @@ function onBlurBorderColor(event) {
   ) {
     inputRefs.classList.add("invalid");
   }
-  // if (inputRefs.value.length === 0) {
-  //   inputRefs.classList.remove("valid");
-  //   inputRefs.classList.remove("invalid");
-  // }
+  if (inputRefs.value.length === 0) {
+    inputRefs.classList.remove("valid");
+    inputRefs.classList.remove("invalid");
+  }
 
 }
