@@ -18,7 +18,8 @@ const onFormSubmit = (event) => {
     } = event.currentTarget;
 
     if (email.value === "" || password.value === "") {
-        return console.log("Чувак, не гарячкуй. Введи пошту і пароль");
+        // return console.log("Чувак, не гарячкуй. Введи пошту і пароль");
+        return alert("Чувак, не гарячкуй. Введи пошту і пароль");
     }
     const mailValue = event.currentTarget.elements.email.value;
     const passwordValue = event.currentTarget.elements.password.value;
@@ -33,5 +34,5 @@ const onFormSubmit = (event) => {
 
 form.addEventListener('submit', onFormSubmit);
 
-
-
+// 
+// 

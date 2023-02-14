@@ -81,7 +81,6 @@ function getRandomHexColor() {
 
 
 
-
 // const buttonEl = document.querySelector('.change-color');
 // const backgColor = document.querySelector('.color')
 

@@ -7,13 +7,11 @@
 //
 //
 
-const slider = document.querySelector('#font-size-control');
-const textEl = document.querySelector('#text');
+const slider = document.querySelector("#font-size-control");
+const textEl = document.querySelector("#text");
+slider.addEventListener("input", handleInputRange);
 
-
-console.log(textEl.style.fontSize);
-
-slider.addEventListener("input", (event) => {
-    textEl.style.fontSize =  event.currentTarget.value + 'px';
-   
-})
+textEl.style.fontSize = slider.value + "px";
+function handleInputRange(event) {
+   textEl.style.fontSize = event.currentTarget.value + "px";
+}
